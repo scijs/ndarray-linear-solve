@@ -1,6 +1,6 @@
 # ndarray-linear-solve
 
-solve a linear system with a cached LU decomposition
+solve a linear system with LU decomposition
 
 This module provides a convenience layer on top of
 [ndarray-crout-decomposition](https://npmjs.org/package/ndarray-crout-decomposition)
@@ -45,22 +45,13 @@ console.log('solution:\n' + show(solve(A, [ 8, -11, -3 ])));
 # methods
 
 ``` js
-var system = require('ndarray-linear-system')
+var solve = require('ndarray-linear-solve')
 ```
 
-## var solve = system(A, L, U)
+## var solution = solve(A, B)
 
-Create a function `solve(B, X, Y)` from a matrix `A` and optional ndarrays `L`
-and `U` to store the LU decomposition.
-
-## var solution = solve(B, X, Y)
-
-Compute a `solution` for the 1d ndarray `B` and optionally with defined 1d
-scratch space for `X` and `Y` which will be allocated intelligently if not
-provided.
-
-The `solution` will be stored in `X` so make sure you don't depend on the
-the `solution` reference elsewhere between calls if you pass in your own `X`.
+Return a `solution` vector for the system of equations described by the square
+matrix ndarray `A` and the vector `B`.
 
 # install
 
