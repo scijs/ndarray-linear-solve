@@ -22,6 +22,24 @@ console.log('solution:\n' + show(solve(A, [ 8, -11, -3 ])));
 output:
 
 ```
+input:
+   2.000    1.000   -1.000
+  -3.000   -1.000    2.000
+  -2.000    1.000    2.000 
+
+solution:
+   2.000    3.000   -1.000
+
+```
+
+or you can just use an ordinary array for the same output:
+
+``` js
+var solve = require('ndarray-linear-solve');
+var show = require('ndarray-show');
+
+var A = [ 2, 1, -1, -3, -1, 2, -2, 1, 2 ];
+console.log('solution:\n' + show(solve(A, [ 8, -11, -3 ])));
 ```
 
 # methods
