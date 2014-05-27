@@ -1,0 +1,41 @@
+{
+  "name": "ndarray-linear-system",
+  "version": "1.0.0",
+  "description": "solve a linear system with a cached LU decomposition",
+  "main": "index.js",
+  "dependencies": {
+    "ndarray": "^1.0.14",
+    "ndarray-crout-decomposition": "^1.0.0",
+    "ndarray-lu-solve": "^1.0.0",
+    "zeros": "~0.0.0"
+  },
+  "devDependencies": {
+    "tape": "~2.12.1",
+    "ndarray-show": "~1.1.0"
+  },
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/ndarray-linear-system.git"
+  },
+  "homepage": "https://github.com/substack/ndarray-linear-system",
+  "keywords": [
+    "ndarray",
+    "linear",
+    "algebra",
+    "equations",
+    "math",
+    "linalg",
+    "lu",
+    "decomposition",
+    "matrix"
+  ],
+  "author": {
+    "name": "James Halliday",
+    "email": "mail@substack.net",
+    "url": "http://substack.net"
+  },
+  "license": "MIT"
+}
