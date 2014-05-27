@@ -7,6 +7,10 @@ This module provides a convenience layer on top of
 and
 [ndarray-lu-solve](https://npmjs.org/package/ndarray-lu-solve)
 
+[![testling badge](https://ci.testling.com/substack/ndarray-linear-solve.png)](https://ci.testling.com/substack/ndarray-linear-solve)
+
+[![build status](https://secure.travis-ci.org/substack/ndarray-linear-solve.png)](http://travis-ci.org/substack/ndarray-linear-solve)
+
 # example
 
 ``` js
