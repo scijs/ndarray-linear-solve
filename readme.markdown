@@ -58,7 +58,7 @@ matrix ndarray `A` and the vector `B`.
 With [npm](https://npmjs.org) do:
 
 ```
-npm install ndarray-linear-system
+npm install ndarray-linear-solve
 ```
 
 # license

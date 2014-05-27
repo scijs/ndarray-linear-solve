@@ -18,9 +18,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/substack/ndarray-linear-system.git"
+    "url": "git://github.com/substack/ndarray-linear-solve.git"
   },
-  "homepage": "https://github.com/substack/ndarray-linear-system",
+  "homepage": "https://github.com/substack/ndarray-linear-solve",
   "keywords": [
     "ndarray",
     "linear",
