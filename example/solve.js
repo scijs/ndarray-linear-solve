@@ -7,4 +7,11 @@ var solve = system(A);
 
 console.log('input:\n' + show(A), '\n');
 
-console.log('solve([ 8, -11, -3 ]) = \n' + show(solve([ 8, -11, -3 ])));
+var inputs = [ [ 8, -11, -3 ], [ 1, 2, 3 ], [ -9, 2, 5 ] ];
+
+inputs.forEach(function (b) {
+    console.log(
+        'solve([' + b + ']) = \n'
+        + show(solve(b)) + '\n'
+    );
+});
