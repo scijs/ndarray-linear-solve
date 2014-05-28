@@ -1,6 +1,6 @@
 {
   "name": "ndarray-linear-solve",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "solve a linear system with a cached LU decomposition",
   "main": "index.js",
   "dependencies": {
