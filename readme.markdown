@@ -52,10 +52,10 @@ console.log('solution:\n' + show(solve(A, [ 8, -11, -3 ])));
 var solve = require('ndarray-linear-solve')
 ```
 
-## var solution = solve(A, B)
+## var solution = solve(A, B[, X])
 
 Return a `solution` vector for the system of equations described by the square
-matrix ndarray `A` and the vector `B`.
+matrix ndarray `A` and the vector `B`.  The solution is stored in the vector `X`
 
 # install
 
