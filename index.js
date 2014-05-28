@@ -11,10 +11,10 @@ module.exports = function (A, B, X) {
     }
     if (B.dimension === undefined) B = ndarray(B);
     if (X === undefined) {
-        X = scratch.malloc([ m ])
+        X = scratch.malloc([ m ]);
     }
     if (X.dimension === undefined) {
-        X = ndarray(X)
+        X = ndarray(X);
     }
     
     var m = A.shape[0], n = A.shape[1];
