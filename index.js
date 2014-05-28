@@ -9,9 +9,14 @@ module.exports = function (A, B, X) {
         if (Math.floor(sq) !== sq) throw new Error('not a square length');
         A = ndarray(A, [ sq, sq ], [ 1, sq ]);
     }
-    if (B.dimension === undefined) B = ndarray(B);
-
     var m = A.shape[0], n = A.shape[1];
+    
+    if (B.dimension === undefined) B = ndarray(B, [m]);
+    
+    if (A.dimension !== 2) throw new Error('not a 2-dimensional matrix');
+    if (m !== n) throw new Error('not a square matrix: ' + m + 'x' + n);
+    if (B.dimension !== 1) throw new Error("B is not a vector")
+    if (B.shape[0] !== m) throw new Error("B has an invalid length")
     
     if (X === undefined) {
         X = scratch.malloc([ m ]);
@@ -20,8 +25,7 @@ module.exports = function (A, B, X) {
         X = ndarray(X, [ m ]);
     }
     
-    if (A.dimension !== 2) throw new Error('not a 2-dimensional matrix');
-    if (m !== n) throw new Error('not a square matrix: ' + m + 'x' + n);
+    if (X.shape[0] < m) throw new Error("X is too small")
     
     var L = scratch.malloc([ m, m ]);
     var ok = crout(A, L, L);
