@@ -10,14 +10,16 @@ module.exports = function (A, B, X) {
         A = ndarray(A, [ sq, sq ], [ 1, sq ]);
     }
     if (B.dimension === undefined) B = ndarray(B);
+
+    var m = A.shape[0], n = A.shape[1];
+    
     if (X === undefined) {
         X = scratch.malloc([ m ]);
     }
     if (X.dimension === undefined) {
         X = ndarray(X);
     }
-    
-    var m = A.shape[0], n = A.shape[1];
+
     
     if (A.dimension !== 2) throw new Error('not a 2-dimensional matrix');
     if (m !== n) throw new Error('not a square matrix: ' + m + 'x' + n);
@@ -33,5 +35,6 @@ module.exports = function (A, B, X) {
     var res = solve(L, L, B, X, Y);
     scratch.free(Y)
     scratch.free(L);
-    return res;
+    if (!res) return undefined
+    return X;
 };
