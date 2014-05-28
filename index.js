@@ -1,7 +1,7 @@
 var solve = require('ndarray-lu-solve');
 var crout = require('ndarray-crout-decomposition');
 var ndarray = require('ndarray');
-var zeros = require('zeros');
+var zeros = require('ndarray-scratch').zeros;
 
 module.exports = function (A, B) {
     if (!A.dimension) {
