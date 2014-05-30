@@ -5,8 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "ndarray": "^1.0.14",
-    "ndarray-crout-decomposition": "^1.0.0",
-    "ndarray-lu-solve": "^1.0.0",
+    "ndarray-crout-decomposition": "^1.1.0",
+    "ndarray-lu-solve": "^1.1.0",
     "ndarray-scratch": "^1.1.0"
   },
   "devDependencies": {
