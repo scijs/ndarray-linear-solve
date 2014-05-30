@@ -12,10 +12,11 @@ var expected = [
 var inputs = [ [ 8, -11, -3 ], [ 1, 2, 3 ], [ -9, 2, 5 ] ];
 
 test('3x3', function (t) {
-    t.plan(expected.length);
+    t.plan(2 * expected.length);
     
     inputs.forEach(function (b) {
-        var r = solve(A, b);
-        t.deepEqual(show(r), show(expected.shift()));
+        var x = ndarray(new Float64Array(3))
+        t.ok(solve(A, ndarray(b), x));
+        t.deepEqual(show(x), show(expected.shift()));
     });
 });

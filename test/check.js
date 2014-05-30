@@ -4,13 +4,17 @@ var ndarray = require('ndarray');
 var show = require('ndarray-show');
 
 test('known solutions', function (t) {
-    var A = [ 1, 2, -1, 2, 3, -1, -2, 0, -3 ];
-    var x = [ -4, -11, 22 ];
-    t.equal(show(solve(A, x)), show([ -8, 1, -2 ]));
+    var r = ndarray(new Float64Array(3))
+
+    var A = ndarray([ 1, 2, -1, 2, 3, -1, -2, 0, -3 ], [3,3], [1,3]);
+    var x = ndarray([ -4, -11, 22 ]);
+    t.ok(solve(A, x, r))
+    t.equal(show(r), show([ -8, 1, -2 ]));
     
-    var B = [ 2, 1, -1, -3, -1, 2, -2, 1, 2 ];
-    var y = [ 8, -11, -3 ];
-    t.equal(show(solve(B, y)), show([ 2, 3, -1 ]));
+    var B = ndarray([ 2, 1, -1, -3, -1, 2, -2, 1, 2 ], [3,3], [1,3]);
+    var y = ndarray([ 8, -11, -3 ]);
+    t.ok(solve(B, y, r))
+    t.equal(show(r), show([ 2, 3, -1 ]));
     
     t.end();
 });
