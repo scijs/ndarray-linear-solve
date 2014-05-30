@@ -45,13 +45,13 @@ var solve = require('ndarray-linear-solve')
 ```
 
 ## var solution = solve(A, B, X)
-Solves a linear system
+Solves the linear system, `AX = B` for `X`
 
-* `A` is a square matrix encoded as an ndarray
-* `B` is the right hand side solution vector 
-* `X` gets the solution vector
+* `A` is a matrix encoded as an ndarray
+* `B` is a vector, encoded as an ndarray
+* `X` is a vector into which the solution is written
 
-**Returns** A truthy value if the matrix has a solution, otherwise `false`.
+**Returns** `true` if the matrix has a solution, otherwise `false`.
 
 # install
 
