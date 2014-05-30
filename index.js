@@ -17,9 +17,8 @@ module.exports = function (A, B, X) {
         X = scratch.malloc([ m ]);
     }
     if (X.dimension === undefined) {
-        X = ndarray(X);
+        X = ndarray(X, [ m ]);
     }
-
     
     if (A.dimension !== 2) throw new Error('not a 2-dimensional matrix');
     if (m !== n) throw new Error('not a square matrix: ' + m + 'x' + n);
