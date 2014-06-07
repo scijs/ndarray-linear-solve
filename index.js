@@ -3,7 +3,7 @@ var crout = require('ndarray-crout-decomposition');
 var ndarray = require('ndarray');
 var scratch = require('ndarray-scratch');
 
-module.exports = function (A, B, X) {
+module.exports = function (X, A, B) {
     //Validate inputs
     if (A.dimension !== 2) throw new Error('not a 2-dimensional matrix');
     var m = A.shape[0], n = A.shape[1];
@@ -22,11 +22,11 @@ module.exports = function (A, B, X) {
     //      * Sparse solvers
     //      
 
-    return denseGeneralSolve(m, A, B, X)
+    return denseGeneralSolve(m, X, A, B)
 };
 
 //TODO: Switch this to LUP eventually for better numerical stability and to support large matrices
-function denseGeneralSolve(m, A, B, X) {
+function denseGeneralSolve(m, X, A, B) {
     var L = scratch.malloc([ m, m ]);
     var ok = crout(A, L, L);
     if (!ok) {

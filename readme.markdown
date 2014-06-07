@@ -16,7 +16,7 @@ var ndarray = require('ndarray');
 var A = ndarray([ 2, 1, -1, -3, -1, 2, -2, 1, 2 ], [ 3, 3 ], [ 1, 3 ]);
 var B = ndarray([ 8, -11, -3 ])
 var X = ndarray(new Float64Array(3))
-var r = solve(A, B, X)
+var r = solve(X, A, B)
 console.log('input:\n' + show(A), '\n');
 if (r) {
   console.log('solution:\n' + show(X));
@@ -44,12 +44,12 @@ solution:
 var solve = require('ndarray-linear-solve')
 ```
 
-## var solution = solve(A, B, X)
+## var solution = solve(X, A, B)
 Solves the linear system, `AX = B` for `X`
 
+* `X` is a vector into which the solution is written
 * `A` is a matrix encoded as an ndarray
 * `B` is a vector, encoded as an ndarray
-* `X` is a vector into which the solution is written
 
 **Returns** `true` if the matrix has a solution, otherwise `false`.
 

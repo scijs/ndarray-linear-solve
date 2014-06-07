@@ -8,12 +8,12 @@ test('known solutions', function (t) {
 
     var A = ndarray([ 1, 2, -1, 2, 3, -1, -2, 0, -3 ], [3,3], [1,3]);
     var x = ndarray([ -4, -11, 22 ]);
-    t.ok(solve(A, x, r))
+    t.ok(solve(r, A, x))
     t.equal(show(r), show([ -8, 1, -2 ]));
     
     var B = ndarray([ 2, 1, -1, -3, -1, 2, -2, 1, 2 ], [3,3], [1,3]);
     var y = ndarray([ 8, -11, -3 ]);
-    t.ok(solve(B, y, r))
+    t.ok(solve(r, B, y))
     t.equal(show(r), show([ 2, 3, -1 ]));
     
     t.end();

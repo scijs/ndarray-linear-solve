@@ -16,7 +16,7 @@ test('3x3', function (t) {
     
     inputs.forEach(function (b) {
         var x = ndarray(new Float64Array(3))
-        t.ok(solve(A, ndarray(b), x));
+        t.ok(solve(x, A, ndarray(b)));
         t.deepEqual(show(x), show(expected.shift()));
     });
 });
